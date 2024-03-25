@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Surojit Saha/ Phd Candidate"
+title                    : "Researcher in Machine Learning and Computer Vision"
 title_separator          : "-"
 name                     : &name "Surojit Saha"
 description              : &description "PhD in Computer Science, University of Utah"
