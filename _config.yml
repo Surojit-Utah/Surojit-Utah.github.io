@@ -81,15 +81,15 @@ analytics:
 # Site Author
 author:
   name             : "Surojit Saha"
-  #avatar           : "profile.png"
+  avatar           : "profile.png"
   bio              : "PhD in Computing, Image Analysis"
   location         : "Salt Lake City, Utah, USA"
   employer         : "University of Utah"
   pubmed           : 
-  googlescholar    : "https://scholar.google.co.in/citations?hl=en&user=Qrs30aYAAAAJ" 
-  email            : tushar9818@gmail.com
-  researchgate     : "https://www.researchgate.net/profile/Tushar-Kataria-3"
-  semanticscholar  : "https://www.semanticscholar.org/author/Tushar-Kataria/2074269068"
+  googlescholar    : "https://scholar.google.com/citations?user=llj6F3wAAAAJ&hl=en" 
+  email            : surojit@cs.utah.edu
+  researchgate     : #"https://www.researchgate.net/profile/Tushar-Kataria-3"
+  semanticscholar  : #"https://www.semanticscholar.org/author/Tushar-Kataria/2074269068"
   uri              :
   bitbucket        :
   codepen          :
@@ -97,14 +97,14 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "tushaarkataria"
+  github           : "Surojit-Utah"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "tushar-kataria-05a69456"
-  orcid            : "https://orcid.org/my-orcid?orcid=0000-0002-9469-5266"
+  linkedin         : #"tushar-kataria-05a69456"
+  orcid            : #"https://orcid.org/my-orcid?orcid=0000-0002-9469-5266"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
