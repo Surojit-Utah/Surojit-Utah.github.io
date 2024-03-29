@@ -1,17 +1,21 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
+#title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Hello!!!!
-
 About me
 ======
-I am final year PhD student working with Prof. Ross Whitaker
+I am final year PhD student at the [Kahlert School of Computing](https://www.cs.utah.edu/), The University of Utah, working with [Prof. Ross Whitaker](https://users.cs.utah.edu/~whitaker/). My research is focused on developing deep latent variable models (DLVMs), such as the VAE, with provable properties of the distribution in the latent space that find application in outlier detection and disentanglement analysis. I have developed a method to find the relevant latent variables in DLVMs that are sufficient to model a data distribution, representing the intrinsic dimensions of the dataset. In addition, I am interested in training deep neural networks with limited annotated data, and I have proposed methods to interpret biomedical and seismic images using Gaussian processes in the few-shot setup. Besides probabilistic modeling, I have worked on registering 3D scans (RGB-D data). During Ph.D., I had the opportunity to collaborate with researchers from ExxonMobil, USA, on multiple projects related to interpreting seismic images, such as few-shot segmentation, outlier detection, multitask learning, and Explainable AI.
+
+Research Interests
+======
+Variational Autoencoders, Diffusion Models, Probabilistic Modeling, Few-shot Learning, Self-supervised Learning, Multitask Learning, and 3D Computer Vision.
+**Skills**: TensorFlow, PyTorch, Python, C, C++, MATLAB.
+
 
 A data-driven personal website
 ======
@@ -19,7 +23,7 @@ Like many other Jekyll-based GitHub Pages templates, academicpages makes you sep
 
 Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
 
-Getting started
+#Getting started
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
 1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
