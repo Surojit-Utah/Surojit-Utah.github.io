@@ -11,7 +11,7 @@ title                    : "Researcher in Machine Learning and Computer Vision"
 title_separator          : "-"
 name                     : &name "Surojit Saha"
 description              : &description "PhD in Computer Science, University of Utah"
-url                      : https://surojitsaha.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io" #https://surojit-utah.github.io/surojitsaha.github.io
+url                      : https://surojit-utah.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io" #https://surojit-utah.github.io/surojitsaha.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
