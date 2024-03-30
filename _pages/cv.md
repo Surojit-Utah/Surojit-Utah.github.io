@@ -5,7 +5,9 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
+paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 ---
+<!---
 
 {% include base_path %}
 
@@ -62,3 +64,4 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+-->
