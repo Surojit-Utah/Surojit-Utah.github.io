@@ -5,7 +5,8 @@ permalink: /projects/
 author_profile: true
 ---
 
-# Matching aggregate posteriors in the variational autoencoder (under preparation)
+# Matching aggregate posteriors in the variational autoencoder
+### (under preparation)
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/ARD-VAE "Code")
 
 * The AVAE matches the aggregate posterior to the prior using kernel density estimate. 
