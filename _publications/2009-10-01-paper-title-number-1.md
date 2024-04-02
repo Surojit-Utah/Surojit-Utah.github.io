@@ -1,11 +1,11 @@
 ---
-title: "Matching aggregate posteriors in the variational autoencoder"
+title: "Matching aggregate posteriors in the variational autoencoder (under preparation)"
 collection: publications
 permalink: /publication/2009-10-01-paper-title-number-1
 #excerpt: ''
 #date: 2009-10-01
-venue: 'Under preparation'
-paperurl: 'http://academicpages.github.io/files/AVAE.pdf'
+#venue: 'Under preparation'
+paperurl: 'http://surojit-utah.github.io/files/AVAE.pdf'
 #citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 
