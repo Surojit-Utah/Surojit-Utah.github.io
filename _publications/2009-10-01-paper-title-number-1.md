@@ -1,3 +1,4 @@
+<!---
 ---
 #title: "Matching aggregate posteriors in the variational autoencoder (under preparation)"
 #collection: publications
@@ -8,7 +9,7 @@
 #paperurl: 'http://surojit-utah.github.io/files/AVAE.pdf'
 #citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
-
+-->
 # Matching aggregate posteriors in the variational autoencoder (under preparation)
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF")
 
