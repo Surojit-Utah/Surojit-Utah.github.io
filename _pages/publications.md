@@ -60,25 +60,23 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 citation: Surojit Saha, Shireen Elhabian, Ross Whitaker, &quot; GENs: Generative Encoding Networks &quot;, <i>Machine Learning</i>, 2022.
 ---
 [PDF](http://surojit-utah.github.io/files/GEN.pdf "PDF")
-
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
-<br />
-<br />
-# GP-UNet: Few-Shot Segmentation of Microscopy Images Using Gaussian Process 
----
-citation: 'Surojit Saha, Ouk Choi, Ross Whitaker (2022), &quot; Few-Shot Segmentation of Microscopy Images Using Gaussian Process, &quot; <i>MOVI, MICCAI workshop</i>.'
----
-[PDF](http://surojit-utah.github.io/files/GPUNet.pdf "PDF")
-
 * Use of the KDE for approximation of the data distribution in the latent space, which is used in the computation of the JSD loss.
 * A robust, automated method for the KDE bandwidth estimation that uses the known structure of the target distribution.
 * An analytical proof that the proposed optimization, on convergence, coincides to, within a known scaling factor, the target distribution.
 * Empirical results showing that the KDE-based JSD computation is as or more effective than the results from adversarial training, particularly with limited training data.
 * A demonstration of the use of the latent space built with GENs for outlier detection with comparisons against SOTA methods.
+
+<br />
+<br />
+# GP-UNet: Few-Shot Segmentation of Microscopy Images Using Gaussian Process 
+---
+citation: Surojit Saha, Ouk Choi, Ross Whitaker, &quot; Few-Shot Segmentation of Microscopy Images Using Gaussian Process &quot;, <i>MOVI, MICCAI workshop</i>, 2022.
+---
+[PDF](http://surojit-utah.github.io/files/GPUNet.pdf "PDF")
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
 
 <!---
 {% include base_path %}
