@@ -4,7 +4,12 @@ title: "Projects"
 permalink: /publications/
 author_profile: true
 ---
+My research is focused on developing deep latent variable models (DLVMs), such as the VAE, with provable properties of the distribution in the latent space that find application in outlier detection and disentanglement analysis. I have developed a method to find the relevant latent variables in DLVMs that are sufficient to model a data distribution, representing the intrinsic dimensions of the dataset. In addition, I am interested in training deep neural networks with limited annotated data, and I have proposed methods to interpret biomedical and seismic images using Gaussian processes in the few-shot setup. Besides probabilistic modeling, I have worked on registering 3D scans (RGB-D data). 
 
+As a research assistant, I have collaborated with researchers from ExxonMobil, USA, on multiple projects related to interpreting seismic images, such as few-shot segmentation, multitask learning, and explainable AI. I also completed a data science-computer vision internship at Ancestry, where I gained valuable experience working with large-scale image data and developing innovative solutions.
+
+<br />
+<br />
 # ARD-VAE: A Statistical Formulation to Find the Relevant Latent Dimensions of Variational Autoencoders 
 <b>Surojit Saha</b>, Sarang Joshi, and Ross Whitaker (2024).
 ***(under review)***<br />
