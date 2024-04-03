@@ -56,12 +56,9 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 <br />
 <br />
 # GENs: Generative Encoding Networks 
-<!---
 ---
 citation: 'Surojit Saha, Shireen Elhabian, Ross Whitaker (2022), &quot; GENs: Generative Encoding Networks, &quot; <i>Machine Learning</i>.'
 ---
--->
-***(under preparation)***<br />
 [PDF](http://surojit-utah.github.io/files/GEN.pdf "PDF")
 
 * Use of the KDE for approximation of the data distribution in the latent space, which is used in the computation of the JSD loss.
