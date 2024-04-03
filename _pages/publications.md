@@ -58,7 +58,7 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 # GENs: Generative Encoding Networks 
 <!---
 ---
-citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
+citation: 'Surojit Saha, Shireen Elhabian, Ross Whitaker (2022), &quot; GENs: Generative Encoding Networks, &quot; <i>Machine Learning</i>.'
 ---
 -->
 ***(under preparation)***<br />
