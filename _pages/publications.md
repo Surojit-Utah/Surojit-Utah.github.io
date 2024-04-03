@@ -27,17 +27,12 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; An Adaptive Few-shot Sema
 ---
 -->
 ***(under review)***<br />
-[PDF](http://surojit-utah.github.io/files/AdaSemSeg.pdf "PDF")
+[PDF](http://surojit-utah.github.io/files/AdaSemSeg.pdf "PDF") [Code](https://github.com/Surojit-Utah/AdaSemSeg "Code")
 
 * We propose an adaptive FSSS method for identifying seismic facies that is flexible to handle the variability in the number of facies across datasets. 
 * Initialization of the image encoder using contrastive learning helps improve the AdaSemSeg’s performance.
 * The performance of the AdaSemSeg evaluated on target datasets without refinement is comparable to the baselines.
 * The AdaSemSeg comprehensively outperforms the prototype-based FSSS method and the segmentation model trained using transfer learning.
-
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
 
 <br />
 <br />
@@ -58,6 +53,9 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 * The use of the diagonal covariance in the posterior distribution, $$q_{\phi}(\mathbf{z} \mid \mathbf{x})$$, in the VAE helps in learning disentangled representations in an unsupervised framework. However, the AVAE is free from such modeling assumptions, and thus, the latent axes do not represent the generative factors of a dataset, unlike the VAE.
 * We propose a technique to discover the latent factors of a dataset using the learned representations of the AVAE.
 
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
 
 <!---
 {% include base_path %}
