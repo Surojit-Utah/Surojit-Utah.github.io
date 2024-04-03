@@ -6,8 +6,7 @@ author_profile: true
 ---
 
 # ARD-VAE: A Statistical Formulation to Find the Relevant Latent Dimensions of Variational Autoencoders 
----
-citation: <b>Surojit Saha</b>, Sarang Joshi, Ross Whitaker, 2024
+<b>Surojit Saha</b>, Sarang Joshi, and Ross Whitaker (2024).
 ***(under review)***<br />
 [PDF](http://surojit-utah.github.io/files/ARD_VAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/ARD-VAE "Code")
 
@@ -18,10 +17,7 @@ citation: <b>Surojit Saha</b>, Sarang Joshi, Ross Whitaker, 2024
 <br />
 <br />
 # AdaSemSeg: An Adaptive Few-shot Semantic Segmentation of Seismic Facies 
-<!---
----
-citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; An Adaptive Few-shot Semantic Segmentation of Seismic Facies.&quot; <i>ICPR </i>.'
----
+<b>Surojit Saha</b>, and Ross Whitaker (2024)
 -->
 ***(under review)***<br />
 [PDF](http://surojit-utah.github.io/files/AdaSemSeg.pdf "PDF") [Code](https://github.com/Surojit-Utah/AdaSemSeg "Code")
@@ -34,11 +30,7 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; An Adaptive Few-shot Sema
 <br />
 <br />
 # Matching Aggregate Posteriors in the Variational Autoencoder 
-<!---
----
-citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
----
--->
+<b>Surojit Saha</b>, Sarang Joshi, and Ross Whitaker. (2024)
 ***(under preparation)***<br />
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/AVAE "Code")
 
@@ -53,9 +45,7 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 <br />
 <br />
 # GENs: Generative Encoding Networks 
----
-citation: <b>Surojit Saha</b>, Shireen Elhabian, Ross Whitaker, &quot; GENs: Generative Encoding Networks &quot;, <i>Machine Learning</i>, 2022.
----
+<b>Surojit Saha</b>, Shireen Elhabian, Ross Whitaker, &quot; GENs: Generative Encoding Networks &quot;, <i>Machine Learning</i>, 2022.
 <br />
 [PDF](http://surojit-utah.github.io/files/GEN.pdf "PDF")
 * Use of the KDE for approximation of the data distribution in the latent space, which is used in the computation of the JSD loss.
