@@ -7,9 +7,7 @@ author_profile: true
 #  - /about.html
 ---
 
-I am final year PhD student at the [Kahlert School of Computing](https://www.cs.utah.edu/), The University of Utah, working with [Prof. Ross Whitaker](https://users.cs.utah.edu/~whitaker/). My research is focused on developing deep latent variable models (DLVMs), such as the VAE, with provable properties of the distribution in the latent space that find application in outlier detection and disentanglement analysis. I have developed a method to find the relevant latent variables in DLVMs that are sufficient to model a data distribution, representing the intrinsic dimensions of the dataset. In addition, I am interested in training deep neural networks with limited annotated data, and I have proposed methods to interpret biomedical and seismic images using Gaussian processes in the few-shot setup. Besides probabilistic modeling, I have worked on registering 3D scans (RGB-D data). 
-
-As a research assistant, I have collaborated with researchers from ExxonMobil, USA, on multiple projects related to interpreting seismic images, such as few-shot segmentation, multitask learning, and explainable AI. I also completed a data science-computer vision internship at Ancestry, where I gained valuable experience working with large-scale image data and developing innovative solutions.
+I am final year PhD student at the [Kahlert School of Computing](https://www.cs.utah.edu/), The University of Utah, working with [Prof. Ross Whitaker](https://users.cs.utah.edu/~whitaker/). My research is focused on developing deep latent variable models (DLVMs), such as the VAE, with provable properties of the distribution in the latent space that find application in outlier detection and disentanglement analysis.
 
 I am passionate about advancing the state-of-the-art in generative AI and applying deep neural networks to real-world problems in diverse domains with a limited training budget. I have a strong background in probabilistic machine learning that accommodates the randomness experienced in real-world challenges. 
 
