@@ -5,6 +5,10 @@ permalink: /publications/
 author_profile: true
 ---
 
+project_avae.md
+
+<!---
+
 # Matching aggregate posteriors in the variational autoencoder 
 ***(under preparation)***<br />
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/AVAE "Code")
@@ -22,7 +26,7 @@ author_profile: true
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-<!---
+
 
 
 {% include base_path %}
