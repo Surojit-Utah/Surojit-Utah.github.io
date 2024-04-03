@@ -5,9 +5,8 @@ permalink: /teaching/
 author_profile: true
 ---
 
-# Probability and Statistics for Engineers
-<b>CS 3130-01 and ECE 3530-01, Spring 2024<b><br>
-<i>Instructor </i> : <b>Dr. Ross T. Whitaker </b>
+# Probability and Statistics for Engineers, Spring 2024
+<i>Instructor </i> : <b>Dr. Ross T. Whitaker </b> &nbsp;&nbsp; <i>Course Name: </i> <b>CS 3130-01 and ECE 3530-01<b>
 <br />
 <br />
 
