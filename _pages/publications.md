@@ -5,7 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
-# Matching aggregate posteriors in the variational autoencoder ###(under preparation)
+# Matching aggregate posteriors in the variational autoencoder 
+***(under preparation)***
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/AVAE "Code")
 
 * The AVAE matches the aggregate posterior to the prior using kernel density estimate. 
@@ -16,11 +17,13 @@ author_profile: true
 * The use of the diagonal covariance in the posterior distribution, $$q_{\phi}(\mathbf{z} \mid \mathbf{x})$$, in the VAE helps in learning disentangled representations in an unsupervised framework. However, the AVAE is free from such modeling assumptions, and thus, the latent axes do not represent the generative factors of a dataset, unlike the VAE.
 * We propose a technique to discover the latent factors of a dataset using the learned representations of the AVAE.
 
-<!---
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
+
+<!---
+
 
 {% include base_path %}
 
