@@ -36,7 +36,7 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; An Adaptive Few-shot Sema
 
 <br />
 <br />
-# Matching aggregate posteriors in the variational autoencoder 
+# Matching Aggregate Posteriors in the Variational Autoencoder 
 <!---
 ---
 citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
@@ -52,6 +52,23 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 * The regularization scalar $$\beta$$ is updated during training using the proposed heuristic. Thus, the AVAE is free from tuning the hyper-parameter, $$\beta$$.
 * The use of the diagonal covariance in the posterior distribution, $$q_{\phi}(\mathbf{z} \mid \mathbf{x})$$, in the VAE helps in learning disentangled representations in an unsupervised framework. However, the AVAE is free from such modeling assumptions, and thus, the latent axes do not represent the generative factors of a dataset, unlike the VAE.
 * We propose a technique to discover the latent factors of a dataset using the learned representations of the AVAE.
+
+<br />
+<br />
+# GENs: Generative Encoding Networks 
+<!---
+---
+citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
+---
+-->
+***(under preparation)***<br />
+[PDF](http://surojit-utah.github.io/files/GEN.pdf "PDF")
+
+* Use of the KDE for approximation of the data distribution in the latent space, which is used in the computation of the JSD loss.
+* A robust, automated method for the KDE bandwidth estimation that uses the known structure of the target distribution.
+* An analytical proof that the proposed optimization, on convergence, coincides to, within a known scaling factor, the target distribution.
+* Empirical results showing that the KDE-based JSD computation is as or more effective than the results from adversarial training, particularly with limited training data.
+* A demonstration of the use of the latent space built with GENs for outlier detection with comparisons against SOTA methods.
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
