@@ -57,7 +57,7 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 <br />
 # GENs: Generative Encoding Networks 
 ---
-citation: 'Surojit Saha, Shireen Elhabian, Ross Whitaker (2022), &quot; GENs: Generative Encoding Networks, &quot; <i>Machine Learning</i>.'
+citation: Surojit Saha, Shireen Elhabian, Ross Whitaker, &quot; GENs: Generative Encoding Networks &quot;, <i>Machine Learning</i>, 2022.
 ---
 [PDF](http://surojit-utah.github.io/files/GEN.pdf "PDF")
 
