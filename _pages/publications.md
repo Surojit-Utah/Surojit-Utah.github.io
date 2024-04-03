@@ -6,6 +6,9 @@ author_profile: true
 ---
 
 # Matching aggregate posteriors in the variational autoencoder 
+---
+citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
+---
 ***(under preparation)***<br />
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/AVAE "Code")
 
@@ -17,9 +20,6 @@ author_profile: true
 * The use of the diagonal covariance in the posterior distribution, $$q_{\phi}(\mathbf{z} \mid \mathbf{x})$$, in the VAE helps in learning disentangled representations in an unsupervised framework. However, the AVAE is free from such modeling assumptions, and thus, the latent axes do not represent the generative factors of a dataset, unlike the VAE.
 * We propose a technique to discover the latent factors of a dataset using the learned representations of the AVAE.
 
----
-citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
----
 
 <!---
 
