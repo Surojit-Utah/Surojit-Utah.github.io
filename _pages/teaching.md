@@ -10,21 +10,18 @@ author_profile: true
 <br />
 <br />
 
-# Image Processing
-<b>CS 6640, Fall 2023<b><br />
-<i>Instructor </i> : <b>Dr. Ross T. Whitaker </b>
+# Image Processing, Fall 2023
+<i>Instructor </i> : <b>Dr. Ross T. Whitaker </b> &nbsp;&nbsp; <i>Course Name: </i><b>CS 6640<b>
 <br />
 <br />
 
-# 3D Computer Vision
-<b>CS 6320/5320, Spring 2020<b><br />
-<i>Instructor </i> : <b>Dr. Tucker Hermans </b>
+# 3D Computer Vision, Spring 2020
+<i>Instructor </i> : <b>Dr. Tucker Hermans </b> &nbsp;&nbsp; <i>Course Name: </i><b>CS 6320/5320<b>
 <br />
 <br />
 
-# Deep Learning
-<b>CS 6955/5955 and MATH 7960, Fall 2019<b><br />
-<i>Instructor </i> : <b>Dr. Berton A. Earnshaw </b>
+# Deep Learning, Fall 2019
+<i>Instructor </i> : <b>Dr. Berton A. Earnshaw </b>  &nbsp;&nbsp; <i>Course Name: </i> <b>CS 6955/5955 and MATH 7960<b>
 
 <!---
 {% include base_path %}
