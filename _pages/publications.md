@@ -29,7 +29,7 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; An Adaptive Few-shot Sema
 ---
 -->
 ***(under review)***<br />
-[PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF")
+[PDF](http://surojit-utah.github.io/files/AdaSemSeg.pdf "PDF")
 
 * We propose an adaptive FSSS method for identifying seismic facies that is flexible to handle the variability in the number of facies across datasets. 
 * Initialization of the image encoder using contrastive learning helps improve the AdaSemSeg’s performance.
