@@ -6,9 +6,11 @@ author_profile: true
 ---
 
 # Matching aggregate posteriors in the variational autoencoder 
+<!---
 ---
 citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
 ---
+-->
 ***(under preparation)***<br />
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/AVAE "Code")
 
