@@ -22,6 +22,9 @@ citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate poster
 * The use of the diagonal covariance in the posterior distribution, $$q_{\phi}(\mathbf{z} \mid \mathbf{x})$$, in the VAE helps in learning disentangled representations in an unsupervised framework. However, the AVAE is free from such modeling assumptions, and thus, the latent axes do not represent the generative factors of a dataset, unlike the VAE.
 * We propose a technique to discover the latent factors of a dataset using the learned representations of the AVAE.
 
+<br />
+<br />
+<br />
 # AdaSemSeg: An Adaptive Few-shot Semantic Segmentation of Seismic Facies 
 <!---
 ---
