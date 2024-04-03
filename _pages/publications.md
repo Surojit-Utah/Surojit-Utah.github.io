@@ -44,6 +44,15 @@ author_profile: true
 
 <br />
 <br />
+# Multi-task Training as Regularization Strategy for Seismic Image Segmentation 
+<b>Surojit Saha</b>, Wasim Gazi, Rehman Mohammed, Thomas Rapstine, Hayden Powers, and Ross Whitaker, &quot; Multi-task Training as Regularization Strategy for Seismic Image Segmentation&quot;, <i>IEEE GEOSCIENCE AND REMOTE SENSING LETTERS</i>, 2023.
+[PDF](http://surojit-utah.github.io/files/Multitask.pdf "PDF")
+* Defining/proposing domain-specific, self-supervised auxiliary tasks for regularizing deep neural networks designed to segment channels in seismic images.
+* Analysis and demonstration of the efficacy of the proposed multi-task learning for segmentation of channels.
+* Exhibition of the effectiveness of multi-task learning in scenarios with limited annotated data to interpret complex seismic images.
+
+<br />
+<br />
 # GENs: Generative Encoding Networks 
 <b>Surojit Saha</b>, Shireen Elhabian, Ross Whitaker, &quot; GENs: Generative Encoding Networks &quot;, <i>Machine Learning</i>, 2022.
 <br />
