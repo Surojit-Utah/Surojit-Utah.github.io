@@ -6,11 +6,8 @@ author_profile: true
 ---
 
 # ARD-VAE: A Statistical Formulation to Find the Relevant Latent Dimensions of Variational Autoencoders 
-<!---
 ---
-citation: 'Surojit Saha, Ross Whitaker. (2024). &quot; Matching aggregate posteriors in the variational autoencoder.&quot; <i>ICPR </i>.'
----
--->
+citation: <b>Surojit Saha</b>, Sarang Joshi, Ross Whitaker, 2024
 ***(under review)***<br />
 [PDF](http://surojit-utah.github.io/files/ARD_VAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/ARD-VAE "Code")
 
