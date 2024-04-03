@@ -46,6 +46,7 @@ author_profile: true
 <br />
 # Multi-task Training as Regularization Strategy for Seismic Image Segmentation 
 <b>Surojit Saha</b>, Wasim Gazi, Rehman Mohammed, Thomas Rapstine, Hayden Powers, and Ross Whitaker, &quot; Multi-task Training as Regularization Strategy for Seismic Image Segmentation&quot;, <i>IEEE GEOSCIENCE AND REMOTE SENSING LETTERS</i>, 2023.
+<br />
 [PDF](http://surojit-utah.github.io/files/Multitask.pdf "PDF")
 * Defining/proposing domain-specific, self-supervised auxiliary tasks for regularizing deep neural networks designed to segment channels in seismic images.
 * Analysis and demonstration of the efficacy of the proposed multi-task learning for segmentation of channels.
@@ -66,9 +67,8 @@ author_profile: true
 <br />
 <br />
 # GP-UNet: Few-Shot Segmentation of Microscopy Images Using Gaussian Process 
----
-citation: Surojit Saha, Ouk Choi, Ross Whitaker, &quot; Few-Shot Segmentation of Microscopy Images Using Gaussian Process &quot;, <i>MOVI, MICCAI workshop</i>, 2022.
----
+Surojit Saha, Ouk Choi, Ross Whitaker, &quot; Few-Shot Segmentation of Microscopy Images Using Gaussian Process &quot;, <i>MOVI, MICCAI workshop</i>, 2022.
+<br />
 [PDF](http://surojit-utah.github.io/files/GPUNet.pdf "PDF")
 
 {% if site.author.googlescholar %}
