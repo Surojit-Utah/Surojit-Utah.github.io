@@ -13,7 +13,7 @@ I am passionate about advancing the state-of-the-art in generative AI and applyi
 
 Research Interests
 ------
-Variational Autoencoders, Diffusion Models, Probabilistic Modeling, Few-shot Learning, Self-supervised Learning, Multitask Learning, and 3D Computer Vision.
+Variational Autoencoders, Diffusion Models, Probabilistic Modeling, Bayesian Statistics, Few-shot Learning, Self-supervised Learning, Multitask Learning, and 3D Computer Vision.
 
 **Skills**: TensorFlow, PyTorch, Python, C, C++, MATLAB.
 
