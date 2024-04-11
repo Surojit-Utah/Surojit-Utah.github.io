@@ -36,7 +36,7 @@ As a research assistant, I have collaborated with researchers from ExxonMobil, U
 <br />
 # Matching Aggregate Posteriors in the Variational Autoencoder 
 <b>Surojit Saha</b>, Sarang Joshi, and Ross Whitaker. (2024)
-***(under preparation)***<br />
+***(under review)***<br />
 [PDF](http://surojit-utah.github.io/files/AVAE.pdf "PDF") [Code](https://github.com/Surojit-Utah/AVAE "Code")
 
 * The AVAE matches the aggregate posterior to the prior using kernel density estimate. 
