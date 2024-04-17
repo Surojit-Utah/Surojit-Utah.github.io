@@ -23,7 +23,6 @@ As a research assistant, I have collaborated with researchers from ExxonMobil, U
 <br />
 # AdaSemSeg: An Adaptive Few-shot Semantic Segmentation of Seismic Facies 
 <b>Surojit Saha</b>, and Ross Whitaker (2024)
--->
 ***(under review)***<br />
 [PDF](http://surojit-utah.github.io/files/AdaSemSeg.pdf "PDF") [Code](https://github.com/Surojit-Utah/AdaSemSeg "Code")
 
@@ -50,7 +49,9 @@ As a research assistant, I have collaborated with researchers from ExxonMobil, U
 <br />
 <br />
 # Multi-task Training as Regularization Strategy for Seismic Image Segmentation 
-<b>Surojit Saha</b>, Wasim Gazi, Rehman Mohammed, Thomas Rapstine, Hayden Powers, and Ross Whitaker, &quot; Multi-task Training as Regularization Strategy for Seismic Image Segmentation&quot;, <i>IEEE GEOSCIENCE AND REMOTE SENSING LETTERS</i>, 2023.
+<b>Surojit Saha</b>*, Wasim Gazi*, Rehman Mohammed, Thomas Rapstine, Hayden Powers, and Ross Whitaker, &quot; Multi-task Training as Regularization Strategy for Seismic Image Segmentation&quot;, <i>IEEE GEOSCIENCE AND REMOTE SENSING LETTERS</i>, 2023.
+<br />
+*=Equal Contribution
 <br />
 [PDF](http://surojit-utah.github.io/files/Multitask.pdf "PDF")
 * Defining/proposing domain-specific, self-supervised auxiliary tasks for regularizing deep neural networks designed to segment channels in seismic images.
