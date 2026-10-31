@@ -114,7 +114,11 @@ p { margin: 0 0 1em; }
 
 /* ---------- Hero ---------- */
 .hero { padding: 64px 0 40px; }
-.hero-grid { display: grid; grid-template-columns: 200px 1fr; gap: 44px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 200px 1fr; gap: 44px; align-items: start; }
+.hero-side { display: flex; flex-direction: column; gap: 20px; }
+.links.vertical { flex-direction: column; margin-top: 0; }
+.links.vertical .btn { width: 100%; padding: 8px 16px; }
+.hero .bio + .bio { margin-top: -2px; }
 .hero-photo {
   width: 200px; height: 200px; border-radius: 50%; object-fit: cover;
   border: 4px solid var(--surface); box-shadow: var(--shadow);
@@ -141,6 +145,8 @@ p { margin: 0 0 1em; }
   .hero { padding: 40px 0 24px; }
   .hero-grid { grid-template-columns: 1fr; gap: 24px; text-align: left; }
   .hero-photo { width: 128px; height: 128px; }
+  .links.vertical { flex-direction: row; }
+  .links.vertical .btn { width: auto; padding: 7px 13px; }
   .hero h1 { font-size: 34px; }
 }
 
