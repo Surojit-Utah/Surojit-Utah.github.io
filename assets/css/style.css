@@ -205,6 +205,9 @@ a.badge:hover { text-decoration: none; filter: brightness(.95); }
 .proj .p-authors .eq { color: var(--text-3); font-size: 14px; }
 .proj .p-venue { color: var(--text-3); font-style: italic; margin: 2px 0 0; }
 .proj .p-venue .badge { font-style: normal; margin-left: 6px; }
+.badge.plain { background: var(--surface-2); color: var(--text-2); }
+.proj .p-text { color: var(--text-2); margin: 14px 0 0; }
+.proj .p-sub { font-size: 13px; text-transform: uppercase; letter-spacing: .07em; color: var(--text-3); font-weight: 600; margin: 20px 0 6px; }
 .p-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .proj figure { margin: 24px 0; }
 .proj figure.narrow img { max-width: 560px; }

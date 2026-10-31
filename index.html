@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
 <script src="assets/js/site.js?v=4"></script>
 <script type="application/ld+json">
 {
@@ -238,6 +238,7 @@
       <a href="#p-multitask">Multitask learning</a>
       <a href="#p-gen">GENs</a>
       <a href="#p-gpunet">GP-UNet</a>
+      <a href="#p-dbayeslora">DBayes-LoRA (ongoing)</a>
     </nav>
 
     <article class="proj" id="p-ardvae">
@@ -445,6 +446,27 @@
         <img src="assets/img/projects/gpunet_result.jpg" alt="GP-UNet 5-shot segmentation outputs on five microscopy datasets" loading="lazy">
         <figcaption>5-shot GP-UNet segmentation on five microscopy datasets: input (top), ground truth (middle) and prediction (bottom).</figcaption>
       </figure>
+    </article>
+
+    <article class="proj" id="p-dbayeslora">
+      <h3>DBayes-LoRA: Bayesian LoRA Fine-Tuning of LLMs with Automatic Rank Pruning</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Ross Whitaker</p>
+      <p class="p-venue">Ongoing work <span class="badge plain">In progress</span></p>
+      <p class="p-text">Low-rank adapters (LoRA) fine-tune large language models with a fixed rank chosen by hand, which wastes capacity in some layers and starves others. We are developing a variational, Bayesian approach that learns how much adapter capacity each layer actually needs and prunes the rest during training.</p>
+      <p class="p-sub">What it offers</p>
+      <ul class="p-contrib">
+        <li><strong>No rank search:</strong> the effective rank is learned from the data, removing a costly grid search over ranks for every new task.</li>
+        <li><strong>Smaller adapters:</strong> uninformative dimensions are pruned during training.</li>
+        <li><strong>Uncertainty-aware:</strong> a probabilistic formulation that aims for better-calibrated predictions.</li>
+      </ul>
+      <p class="p-sub">Where this matters</p>
+      <ul class="p-contrib">
+        <li><strong>Many adapters on one model:</strong> enterprise platforms serve a separate adapter per customer or task on a shared base model. Smaller adapters mean more of them fit in GPU memory, with lower serving cost.</li>
+        <li><strong>On-device personalization:</strong> phones and laptops have tight memory budgets, so compact, per-user adapters make on-device fine-tuning and inference practical.</li>
+        <li><strong>Domain adaptation with limited data:</strong> specialized domains such as healthcare, legal and supply chain often have little labeled data, and a Bayesian prior helps guard against overfitting.</li>
+        <li><strong>Knowing when not to trust the model:</strong> calibrated confidence lets LLM-based systems, including AI agents, defer to a human or ask for clarification when unsure, which is critical in high-stakes decisions.</li>
+      </ul>
+      <p class="p-text">Early experiments on LLaMA-2-7B are promising. A paper and code will follow.</p>
     </article>
 
     <p class="proj-more">Earlier work on 3D multi-scan alignment (CVPR 2019) and Monte Carlo localization for mobile robots is listed under <a href="#publications">Publications</a>.</p>
