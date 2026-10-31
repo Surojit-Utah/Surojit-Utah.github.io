@@ -263,7 +263,6 @@
         <li><strong>Many adapters on one model:</strong> enterprise platforms serve a separate adapter per customer or task on a shared base model. Smaller adapters mean more of them fit in GPU memory, with lower serving cost.</li>
         <li><strong>On-device personalization:</strong> phones and laptops have tight memory budgets, so compact, per-user adapters make on-device fine-tuning and inference practical.</li>
         <li><strong>Domain adaptation with limited data:</strong> specialized domains such as healthcare, legal and supply chain often have little labeled data, and a Bayesian prior helps guard against overfitting.</li>
-        <li><strong>Knowing when not to trust the model:</strong> calibrated confidence lets LLM-based systems, including AI agents, defer to a human or ask for clarification when unsure, which is critical in high-stakes decisions.</li>
       </ul>
       <p class="p-text">Early experiments on LLaMA-2-7B are promising. A paper and code will follow.</p>
     </article>
