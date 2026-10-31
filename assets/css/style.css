@@ -207,6 +207,10 @@ section.block { padding: 44px 0; border-top: 1px solid var(--border); }
 .p-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
 .proj figure { margin: 24px 0; }
 .proj figure.narrow img { max-width: 560px; }
+.fig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; align-items: start; }
+.fig-row figure { margin: 0; }
+.fig-row figcaption strong { color: var(--text-2); }
+@media (max-width: 700px) { .fig-row { grid-template-columns: 1fr; } }
 .p-contrib { margin: 0; padding-left: 20px; color: var(--text-2); }
 .p-contrib li { margin: 7px 0; }
 .proj-more { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 15px; }

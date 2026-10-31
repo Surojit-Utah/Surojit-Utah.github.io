@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="stylesheet" href="assets/css/style.css?v=5">
 <script src="assets/js/site.js?v=4"></script>
 <script type="application/ld+json">
 {
@@ -263,14 +263,16 @@
         <a class="btn sm" href="https://doi.org/10.5281/zenodo.21764042">Data</a>
         <a class="btn sm" href="projects/adasemseg.html">Project page</a>
       </div>
-      <figure class="narrow">
-        <img src="assets/img/projects/adasemseg_task.jpg" alt="Few-shot facies segmentation task" loading="lazy">
-        <figcaption>The goal: given only five annotated slices from a seismic survey never seen during training, predict the facies of every pixel in a new query slice, without fine-tuning.</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/img/projects/adasemseg_facies.jpg" alt="Parihaka has six facies and Penobscot has seven, with different names" loading="lazy">
-        <figcaption>The challenge: seismic surveys differ in both the number of facies and their naming. Parihaka (New Zealand) has six facies, while Penobscot (Canada) has seven, so a segmentation model with a fixed number of classes cannot move between them.</figcaption>
-      </figure>
+      <div class="fig-row">
+        <figure>
+          <img src="assets/img/projects/adasemseg_task.jpg" alt="Few-shot facies segmentation task" loading="lazy">
+          <figcaption><strong>The goal:</strong> from five annotated slices of a survey never seen in training, predict the facies of a new query slice, without fine-tuning.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/projects/adasemseg_facies.jpg" alt="Parihaka has six facies and Penobscot has seven, with different names" loading="lazy">
+          <figcaption><strong>The challenge:</strong> surveys differ in the number and naming of facies. Parihaka has six, Penobscot has seven, so a fixed-class model can't move between them.</figcaption>
+        </figure>
+      </div>
       <ul class="p-contrib">
         <li>An adaptive few-shot segmentation method for seismic facies that handles a different number of facies in each dataset, with no change to the architecture.</li>
         <li>Generalizes to unseen seismic surveys from a handful of annotated slices, without fine-tuning on the target survey.</li>
