@@ -68,6 +68,11 @@
       <figcaption>The task: given a few annotated support slices from an unseen seismic volume, predict the facies of every pixel in a query slice.</figcaption>
     </figure>
 
+    <figure>
+      <img src="../assets/img/projects/adasemseg_facies.jpg" alt="Parihaka has six facies and Penobscot has seven, with different names" loading="lazy">
+      <figcaption>Seismic surveys differ in both the number of facies and their naming: Parihaka (New Zealand) has six facies, Penobscot (Canada) has seven.</figcaption>
+    </figure>
+
     <h2>The problem</h2>
     <p>Interpreting seismic facies is pixel-wise multi-class segmentation, and annotating 3D seismic volumes is expensive. Few-shot segmentation is a natural fit, but existing methods fix the number of classes at training time. Seismic surveys don't cooperate: F3 (Netherlands) and Parihaka (New Zealand) have six facies each with different names, and Penobscot (Canada) has seven. A fixed-class model can't move between them.</p>
 

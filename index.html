@@ -249,10 +249,6 @@
         <li>Starts from a generous latent size and prunes it down; on synthetic data with six known factors it recovers about six active dimensions.</li>
         <li>Gives the best or near-best FID, precision–recall, and disentanglement (MIG) on real and synthetic datasets.</li>
       </ul>
-      <figure class="narrow">
-        <img src="assets/img/projects/ardvae_estvar.jpg" alt="Estimated per-axis variance on CIFAR-10" loading="lazy">
-        <figcaption>Maximum and minimum estimated per-axis variance during training on CIFAR-10 (L = 128 and 256): relevant axes keep large variance while the least relevant collapse toward zero.</figcaption>
-      </figure>
     </article>
 
     <article class="proj" id="p-adasemseg">
@@ -267,9 +263,13 @@
         <a class="btn sm" href="https://doi.org/10.5281/zenodo.21764042">Data</a>
         <a class="btn sm" href="projects/adasemseg.html">Project page</a>
       </div>
+      <figure class="narrow">
+        <img src="assets/img/projects/adasemseg_task.jpg" alt="Few-shot facies segmentation task" loading="lazy">
+        <figcaption>The goal: given only five annotated slices from a seismic survey never seen during training, predict the facies of every pixel in a new query slice, without fine-tuning.</figcaption>
+      </figure>
       <figure>
-        <img src="assets/img/projects/adasemseg_arch.jpg" alt="AdaSemSeg architecture" loading="lazy">
-        <figcaption>AdaSemSeg decomposes multi-class segmentation into class-agnostic binary tasks. Shared encoders feed a Gaussian-process regressor per facies, and a shared decoder predicts each mask.</figcaption>
+        <img src="assets/img/projects/adasemseg_facies.jpg" alt="Parihaka has six facies and Penobscot has seven, with different names" loading="lazy">
+        <figcaption>The challenge: seismic surveys differ in both the number of facies and their naming. Parihaka (New Zealand) has six facies, while Penobscot (Canada) has seven, so a segmentation model with a fixed number of classes cannot move between them.</figcaption>
       </figure>
       <ul class="p-contrib">
         <li>An adaptive few-shot segmentation method for seismic facies that handles a different number of facies in each dataset, with no change to the architecture.</li>
@@ -277,9 +277,9 @@
         <li>Initializing the image encoder with contrastive learning (SimCLR) on unlabeled seismic data substantially improves performance.</li>
         <li>Comprehensively outperforms a prototype-based few-shot method and a segmentation model trained with transfer learning.</li>
       </ul>
-      <figure class="narrow">
-        <img src="assets/img/projects/adasemseg_task.jpg" alt="Few-shot facies segmentation task" loading="lazy">
-        <figcaption>The task: given five annotated slices from an unseen seismic volume, predict the facies of a query slice.</figcaption>
+      <figure>
+        <img src="assets/img/projects/adasemseg_arch.jpg" alt="AdaSemSeg architecture" loading="lazy">
+        <figcaption>The approach: AdaSemSeg decomposes multi-class segmentation into class-agnostic binary tasks. Shared encoders feed a Gaussian-process regressor per facies, and a shared decoder predicts each mask.</figcaption>
       </figure>
     </article>
 

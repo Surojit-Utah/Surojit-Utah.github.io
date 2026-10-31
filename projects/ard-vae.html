@@ -112,11 +112,6 @@
     </div>
     <p class="table-note">Selected baselines shown. Mask- and gating-based methods collapse or diverge on the shared architecture, while ARD-VAE uses fewer dimensions than its nominal size and gives the best CIFAR-10 FID, precision and recall.</p>
 
-    <figure>
-      <img src="../assets/img/projects/ardvae_estvar.jpg" alt="Estimated per-axis variance on CIFAR-10" loading="lazy" style="max-width:520px">
-      <figcaption>Estimated per-axis variance on CIFAR-10. Relevant axes keep substantial variance, while irrelevant axes collapse toward zero.</figcaption>
-    </figure>
-
     <h3>Robust to the starting size</h3>
     <p>Doubling or quadrupling the initial latent size barely changes the discovered count or the FID (MNIST: 12.6 vs 12.4 active dimensions; CIFAR-10: 116.4 vs 117.8), so the latent size no longer needs careful tuning.</p>
 
