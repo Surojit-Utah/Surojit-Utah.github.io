@@ -192,6 +192,8 @@ section.block { padding: 44px 0; border-top: 1px solid var(--border); }
   background: var(--accent-soft); color: var(--accent); letter-spacing: .01em; vertical-align: 2px;
 }
 .badge.gold { background: var(--gold-soft); color: var(--gold); }
+a.badge:hover { text-decoration: none; filter: brightness(.95); }
+.pub .row a.badge { border: 0; padding: 2px 9px; border-radius: 999px; color: var(--gold); font-size: 12px; font-weight: 600; }
 .btn.sm { font-size: 13px; padding: 4px 12px; }
 .proj-toc { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 18px 0 8px; font-size: 14.5px; }
 .proj-toc a { color: var(--text-2); }
