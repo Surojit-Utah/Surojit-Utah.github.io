@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=5">
+<link rel="stylesheet" href="assets/css/style.css?v=6">
 <script src="assets/js/site.js?v=4"></script>
 <script type="application/ld+json">
 {
@@ -43,6 +43,7 @@
     <a class="brand" href="#top">Surojit Saha</a>
     <nav class="nav" aria-label="Main">
       <div class="nav-links">
+        <a href="#news">News</a>
         <a href="#experience">Experience</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
@@ -111,15 +112,20 @@
 </section>
 
 <!-- ================= HIGHLIGHTS ================= -->
-<section class="block" aria-label="Highlights">
+<section class="block" id="news">
   <div class="wrap">
-    <div class="highlights">
-      <div class="hl"><div class="k">Oral</div><div class="v">WACV 2025</div><div class="s">ARD-VAE</div></div>
-      <div class="hl"><div class="k">Oral</div><div class="v">ICPR 2024</div><div class="s">Aggregate VAE</div></div>
-      <div class="hl"><div class="k">Best Paper</div><div class="v">MICCAI MOVI 2022</div><div class="s">GP-UNet few-shot segmentation</div></div>
-      <div class="hl"><div class="k">Journal</div><div class="v">IEEE TGRS 2025</div><div class="s">AdaSemSeg</div></div>
-    </div>
-    <div class="chips" aria-label="Interests">
+    <div class="section-head"><h2>News</h2></div>
+    <ul class="news">
+      <li><span class="when">2026</span><span>Released the AdaSemSeg <a href="https://github.com/Surojit-Utah/AdaSemSeg">code</a>, <a href="https://doi.org/10.5281/zenodo.21762769">trained weights</a>, and <a href="https://doi.org/10.5281/zenodo.21764042">processed datasets</a> (Zenodo DOIs).</span></li>
+      <li><span class="when">2025</span><span><a href="#p-adasemseg">AdaSemSeg</a> published in <em>IEEE Transactions on Geoscience and Remote Sensing</em>.</span></li>
+      <li><span class="when">Apr 2025</span><span><a href="#p-disent">Disentanglement analysis</a> paper presented at ICASSP 2025.</span></li>
+      <li><span class="when">Feb 2025</span><span><a href="#p-ardvae">ARD-VAE</a> presented as an <strong>oral</strong> at WACV 2025.</span></li>
+      <li><span class="when">Dec 2024</span><span><a href="#p-avae">AVAE</a> presented as an <strong>oral</strong> at ICPR 2024.</span></li>
+      <li><span class="when">Nov 2024</span><span>Joined Microsoft as a Data Scientist.</span></li>
+      <li><span class="when">Oct 2024</span><span>Defended my PhD at the University of Utah.</span></li>
+    </ul>
+    <p class="sub-head" style="margin-top:28px">Interests</p>
+    <div class="chips" aria-label="Interests" style="margin-top:8px">
       <span class="chip">Agentic AI</span>
       <span class="chip">LLM fine-tuning</span>
       <span class="chip">LLM evaluation</span>

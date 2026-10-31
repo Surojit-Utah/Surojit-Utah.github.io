@@ -157,14 +157,13 @@ section.block { padding: 44px 0; border-top: 1px solid var(--border); }
 .section-head .aside { color: var(--text-3); font-size: 14px; }
 .lede { color: var(--text-2); max-width: 760px; }
 
-/* Highlights */
-.highlights { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.hl { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
-.hl .k { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-3); font-weight: 600; }
-.hl .v { font-weight: 600; margin-top: 4px; line-height: 1.35; }
-.hl .s { color: var(--text-3); font-size: 14px; }
-@media (max-width: 860px) { .highlights { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 460px) { .highlights { grid-template-columns: 1fr; } }
+/* News */
+.news { list-style: none; margin: 0; padding: 0; max-width: 820px; }
+.news li { display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 9px 0; border-bottom: 1px dashed var(--border); color: var(--text-2); }
+.news li:last-child { border-bottom: 0; }
+.news .when { color: var(--text-3); font-size: 14px; font-variant-numeric: tabular-nums; padding-top: 1px; white-space: nowrap; }
+.news strong { color: var(--text); }
+@media (max-width: 520px) { .news li { grid-template-columns: 1fr; gap: 0; } }
 
 /* Interests chips */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
