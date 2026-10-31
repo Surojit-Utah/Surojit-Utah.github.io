@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disentanglement Analysis — Surojit Saha</title>
+<meta name="description" content="ICASSP 2025: PCA-based disentanglement metrics for deep latent variable models that match aggregate posteriors, where generative factors need not align with coordinate axes.">
+<link rel="canonical" href="https://surojit-utah.github.io/projects/disentanglement.html">
+<meta property="og:title" content="Disentanglement Analysis in Deep Latent Variable Models Matching Aggregate Posterior Distributions">
+<meta property="og:description" content="ICASSP 2025. Rotation-aware disentanglement evaluation using PCA-discovered latent directions.">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Surojit Saha</a>
+    <nav class="nav" aria-label="Main">
+      <div class="nav-links">
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../files/Surojit_Saha_CV.pdf">CV</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="crumb"><a href="../index.html#research">&larr; Research</a></div>
+
+  <div class="p-hero">
+    <h1>Disentanglement Analysis in Deep Latent Variable Models Matching Aggregate Posterior Distributions</h1>
+    <div class="authors"><span class="me">Surojit Saha</span>, Sarang Joshi, Ross Whitaker &middot; Scientific Computing and Imaging Institute, University of Utah</div>
+    <div class="venue">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2025</div>
+    <div class="links">
+      <a class="btn primary" href="https://doi.org/10.1109/ICASSP49660.2025.10889788">Paper</a>
+      <a class="btn" href="https://arxiv.org/abs/2501.15705">arXiv</a>
+      <a class="btn" href="https://github.com/Surojit-Utah/PCA_Disentanglement">Code</a>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="tldr"><strong>In short:</strong> standard disentanglement metrics assume each generative factor lines up with one latent coordinate axis. That holds for VAEs, but not for models that match their aggregate posterior to an isotropic Gaussian, whose latent space can be freely rotated. Evaluating along PCA-discovered directions instead of the coordinate axes gives these models a fair score.</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="n">+43.2</div><div class="l">FactorVAE score gain for the AVAE on DSprites (35.9 → 79.2)</div></div>
+      <div class="stat"><div class="n">+0.47</div><div class="l">MIG gain for the AVAE on 3D Shapes (0.20 → 0.67)</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">models evaluated: VAE, β-TCVAE, DIP-VAE-I, AAE, WAE-MMD, AVAE</div></div>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 640 260" width="100%" role="img" aria-label="Diagram: coordinate axes versus principal directions of a rotated latent distribution" style="border:1px solid var(--border);border-radius:10px;background:var(--surface)">
+        <g transform="translate(170 130)">
+          <text x="0" y="-108" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="currentColor" opacity=".7">Coordinate axes</text>
+          <line x1="-120" y1="0" x2="120" y2="0" stroke="currentColor" stroke-opacity=".55" stroke-width="2"/>
+          <line x1="0" y1="-85" x2="0" y2="85" stroke="currentColor" stroke-opacity=".55" stroke-width="2"/>
+          <g transform="rotate(-35)"><ellipse rx="110" ry="30" fill="var(--accent)" fill-opacity=".18" stroke="var(--accent)" stroke-opacity=".5"/></g>
+        </g>
+        <g transform="translate(470 130)">
+          <text x="0" y="-108" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="currentColor" opacity=".7">PCA-discovered directions</text>
+          <line x1="-120" y1="0" x2="120" y2="0" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="4 4"/>
+          <line x1="0" y1="-85" x2="0" y2="85" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="4 4"/>
+          <g transform="rotate(-35)">
+            <ellipse rx="110" ry="30" fill="var(--accent)" fill-opacity=".18" stroke="var(--accent)" stroke-opacity=".5"/>
+            <line x1="-125" y1="0" x2="125" y2="0" stroke="var(--accent)" stroke-width="2.5"/>
+            <line x1="0" y1="-45" x2="0" y2="45" stroke="var(--accent)" stroke-width="2.5"/>
+          </g>
+        </g>
+      </svg>
+      <figcaption>Because N(0, I) is rotation-invariant, a model can place a generative factor along any direction. Metrics computed along the coordinate axes (left) penalize this; metrics computed along the directions found by PCA (right) do not.</figcaption>
+    </figure>
+
+    <h2>The problem</h2>
+    <p>FactorVAE, MIG and DCI scores measure whether each ground-truth factor is captured by a single latent coordinate. VAEs encourage this through their factorized Gaussian posterior. But a family of models, including the AVAE, adversarial autoencoders, Wasserstein autoencoders and GENs, matches the <em>aggregate</em> posterior to an isotropic Gaussian. Rotating their latent space changes nothing about reconstruction or the latent distribution, so their factors may lie along arbitrary directions, and standard metrics wrongly score them as entangled.</p>
+
+    <h2>Approach</h2>
+    <ul>
+      <li><strong>Discover directions, don't assume them.</strong> Fix one ground-truth factor, vary the others, and apply PCA to the encoded samples. The direction of least variance corresponds to the fixed factor.</li>
+      <li><strong>Aggregate the estimates.</strong> Repeat across many batches and combine the estimates by eigendecomposition of their mean outer product, giving a stable set of latent directions.</li>
+      <li><strong>Re-score along those directions.</strong> PCA FactorVAE and PCA MIG apply the standard metrics to codes projected onto the discovered directions. The framework works for any deep latent variable model.</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>Mean over 10 runs. Aggregate-posterior models gain substantially, while axis-aligned VAEs change little, which shows the new metrics correct a bias rather than inflating every score.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Method</th><th>DSprites FactorVAE</th><th>PCA FactorVAE</th><th>3D Shapes FactorVAE</th><th>PCA FactorVAE</th><th>3D Shapes MIG</th><th>PCA MIG</th></tr></thead>
+        <tbody>
+          <tr><td>VAE</td><td>64.78</td><td>75.56</td><td>78.57</td><td>81.92</td><td>0.38</td><td>0.38</td></tr>
+          <tr><td>β-TCVAE</td><td>75.55</td><td>69.12</td><td>86.49</td><td>84.93</td><td>0.53</td><td>0.52</td></tr>
+          <tr><td>DIP-VAE-I</td><td>61.77</td><td>70.68</td><td>81.11</td><td>80.32</td><td>0.44</td><td>0.42</td></tr>
+          <tr><td>AAE</td><td>22.18</td><td>60.67</td><td>55.22</td><td>82.40</td><td>0.15</td><td>0.44</td></tr>
+          <tr><td>WAE-MMD</td><td>17.82</td><td>58.87</td><td>43.93</td><td>81.79</td><td>0.10</td><td>0.43</td></tr>
+          <tr class="ours"><td>AVAE</td><td>35.94</td><td>79.17</td><td>56.46</td><td>91.93</td><td>0.20</td><td>0.67</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">With PCA-based evaluation, the AVAE gets the highest disentanglement scores on both datasets. Standard deviations and DSprites MIG are in the paper and repository.</p>
+
+    <h2>Citation</h2>
+    <div class="bib"><button type="button">Copy</button><pre>@inproceedings{saha2025disentanglement,
+  title     = {Disentanglement Analysis in Deep Latent Variable Models
+               Matching Aggregate Posterior Distributions},
+  author    = {Saha, Surojit and Joshi, Sarang and Whitaker, Ross},
+  booktitle = {IEEE International Conference on Acoustics, Speech and
+               Signal Processing (ICASSP)},
+  year      = {2025},
+  doi       = {10.1109/ICASSP49660.2025.10889788}
+}</pre></div>
+
+    <div class="next-prev">
+      <a href="adasemseg.html">&larr; AdaSemSeg</a>
+      <a href="ard-vae.html">ARD-VAE &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Surojit Saha</span>
+    <span><a href="../index.html">Home</a> · <a href="https://github.com/Surojit-Utah">GitHub</a> · <a href="https://scholar.google.com/citations?user=llj6F3wAAAAJ&amp;hl=en">Scholar</a></span>
+  </div>
+</footer>
+</body>
+</html>

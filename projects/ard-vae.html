@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARD-VAE — Surojit Saha</title>
+<meta name="description" content="ARD-VAE (WACV 2025, oral): a hierarchical, data-driven prior that lets a variational autoencoder discover how many latent dimensions a dataset needs.">
+<link rel="canonical" href="https://surojit-utah.github.io/projects/ard-vae.html">
+<meta property="og:title" content="ARD-VAE: Finding the Relevant Latent Dimensions of VAEs">
+<meta property="og:description" content="WACV 2025 oral. Automatic relevance determination for VAEs without modifying the ELBO.">
+<meta property="og:image" content="https://surojit-utah.github.io/assets/img/projects/ardvae_thumb.jpg">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Surojit Saha</a>
+    <nav class="nav" aria-label="Main">
+      <div class="nav-links">
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#publications">Publications</a>
+        <a href="../files/Surojit_Saha_CV.pdf">CV</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="crumb"><a href="../index.html#research">&larr; Research</a></div>
+
+  <div class="p-hero">
+    <h1>ARD-VAE: A Statistical Formulation to Find the Relevant Latent Dimensions of Variational Autoencoders</h1>
+    <div class="authors"><span class="me">Surojit Saha</span>, Sarang Joshi, Ross Whitaker &middot; University of Utah</div>
+    <div class="venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2025</div>
+    <div class="meta"><span class="badge gold">Oral presentation</span></div>
+    <div class="links">
+      <a class="btn primary" href="https://doi.org/10.1109/WACV61041.2025.00096">Paper</a>
+      <a class="btn" href="https://arxiv.org/abs/2501.10901">arXiv</a>
+      <a class="btn" href="https://github.com/Surojit-Utah/ARD-VAE">Code</a>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p class="tldr"><strong>In short:</strong> instead of tuning the size of a VAE's bottleneck by trial and error, ARD-VAE starts with a generous latent size and lets a data-driven hierarchical prior shrink the unnecessary axes. The relevant dimensions can be read off after training. Only the prior changes; the ELBO, the architecture and the training recipe stay the same.</p>
+
+    <div class="stat-row">
+      <div class="stat"><div class="n">≈ 6 / 6</div><div class="l">active dimensions recovered on DSprites and 3D Shapes (6 true factors), starting from 10</div></div>
+      <div class="stat"><div class="n">87.56</div><div class="l">FID on CIFAR-10: best among all compared methods, using ~106 of 128 dimensions</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">extra regularizers or hyperparameters beyond the standard KL weight</div></div>
+    </div>
+
+    <figure>
+      <img src="../assets/img/projects/ardvae_traversal.jpg" alt="Latent traversals on 3D Shapes" loading="lazy">
+      <figcaption>Latent traversals on 3D Shapes. Each relevant axis found by ARD-VAE controls one generative factor (object hue, floor hue, orientation, scale, shape, wall hue). Traversing the pruned axes (red box) leaves the output unchanged.</figcaption>
+    </figure>
+
+    <h2>The problem</h2>
+    <p>A standard VAE uses a fixed isotropic prior <span class="math">N(0, I)</span>, which forces every latent axis to unit variance. The number of latent dimensions therefore has to be chosen by hand. If it is too small, the model underfits. If it is too large, the extra axes waste capacity and hurt generation quality. Existing remedies rely on trainable masks or <span class="math">L<sub>0</sub></span> penalties, which are sensitive to architecture and optimization settings.</p>
+
+    <h2>Approach</h2>
+    <ul>
+      <li><strong>Relevance-aware hierarchical prior.</strong> Each latent axis gets its own precision with a Gamma hyperprior, the classic automatic relevance determination (ARD) construction. Marginalizing the precision gives a heavy-tailed Student's-t prior that concentrates mass near zero, which drives unused axes to collapse.</li>
+      <li><strong>Hyperprior estimated from data.</strong> Because the Gamma distribution is conjugate to the Gaussian, the posterior over each axis's precision has a closed form that is refreshed from the latest encoded samples during training.</li>
+      <li><strong>Closed-form KL, unchanged ELBO.</strong> With enough samples, the prior is well approximated by a Gaussian with a learned per-axis variance, so the KL term stays analytic. Nothing else in the VAE objective changes.</li>
+      <li><strong>Reading off relevance.</strong> Collapsed axes keep a small but non-zero variance, so ARD-VAE sharpens the estimate by weighting each axis's variance by the decoder's sensitivity to it (the mean squared Jacobian), then keeps the axes that carry most of the total relevance.</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>All methods are trained five times per dataset; the tables report means.</p>
+
+    <h3>Disentanglement on synthetic data with 6 known factors</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Method</th><th>DSprites FactorVAE ↑</th><th>MIG ↑</th><th>Active</th><th>3D Shapes FactorVAE ↑</th><th>MIG ↑</th><th>Active</th></tr></thead>
+        <tbody>
+          <tr><td>VAE (L=6)</td><td>64.78</td><td>0.06</td><td>6.0</td><td>55.85</td><td>0.13</td><td>6.0</td></tr>
+          <tr><td>β-TCVAE (L=6)</td><td><strong>75.55</strong></td><td>0.20</td><td>6.0</td><td>75.51</td><td>0.40</td><td>6.0</td></tr>
+          <tr><td>DIP-VAE-II (L=6)</td><td>60.70</td><td>0.08</td><td>6.0</td><td>63.66</td><td>0.24</td><td>6.0</td></tr>
+          <tr><td>RAE (L=6)</td><td>64.21</td><td>0.04</td><td>6.0</td><td>53.57</td><td>0.03</td><td>6.0</td></tr>
+          <tr class="ours"><td>ARD-VAE (L=10)</td><td>63.37</td><td>0.22</td><td>5.8</td><td>79.26</td><td>0.52</td><td>6.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Selected baselines shown; full tables are in the paper. Competing methods are given the true factor count (L=6), an advantage unavailable in practice. ARD-VAE starts from L=10 and finds the count itself, with the best MIG on both datasets.</p>
+
+    <h3>Generative quality</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Method</th><th>MNIST Active</th><th>FID ↓</th><th>Recall ↑</th><th>CIFAR-10 Active</th><th>FID ↓</th><th>Precision ↑</th><th>Recall ↑</th></tr></thead>
+        <tbody>
+          <tr><td>VAE</td><td>16</td><td>28.78</td><td>0.97</td><td>128</td><td>147.74</td><td>0.50</td><td>0.47</td></tr>
+          <tr><td>RAE</td><td>16</td><td><strong>18.79</strong></td><td>0.95</td><td>128</td><td>94.34</td><td>0.74</td><td>0.47</td></tr>
+          <tr><td>WAE</td><td>16</td><td>25.42</td><td>0.92</td><td>128</td><td>140.49</td><td>0.42</td><td>0.31</td></tr>
+          <tr><td>GECO-L<sub>0</sub>-ARM-VAE</td><td>10.0</td><td>304.75</td><td>0.38</td><td>68.0</td><td>320.75</td><td>0.02</td><td>0.04</td></tr>
+          <tr><td>MaskAAE</td><td>9.8</td><td>144.92</td><td>0.07</td><td>3.8</td><td>298.30</td><td>0.07</td><td>0.04</td></tr>
+          <tr class="ours"><td>ARD-VAE</td><td>12.8</td><td>22.24</td><td>0.98</td><td>105.8</td><td>87.56</td><td>0.82</td><td>0.51</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Selected baselines shown. Mask- and gating-based methods collapse or diverge on the shared architecture, while ARD-VAE uses fewer dimensions than its nominal size and gives the best CIFAR-10 FID, precision and recall.</p>
+
+    <figure>
+      <img src="../assets/img/projects/ardvae_estvar.jpg" alt="Estimated per-axis variance on CIFAR-10" loading="lazy" style="max-width:520px">
+      <figcaption>Estimated per-axis variance on CIFAR-10. Relevant axes keep substantial variance, while irrelevant axes collapse toward zero.</figcaption>
+    </figure>
+
+    <h3>Robust to the starting size</h3>
+    <p>Doubling or quadrupling the initial latent size barely changes the discovered count or the FID (MNIST: 12.6 vs 12.4 active dimensions; CIFAR-10: 116.4 vs 117.8), so the latent size no longer needs careful tuning.</p>
+
+    <h2>Citation</h2>
+    <div class="bib"><button type="button">Copy</button><pre>@inproceedings{saha2025ardvae,
+  title     = {ARD-VAE: A Statistical Formulation to Find the Relevant
+               Latent Dimensions of Variational Autoencoders},
+  author    = {Saha, Surojit and Joshi, Sarang and Whitaker, Ross},
+  booktitle = {IEEE/CVF Winter Conference on Applications of
+               Computer Vision (WACV)},
+  year      = {2025},
+  doi       = {10.1109/WACV61041.2025.00096}
+}</pre></div>
+
+    <div class="next-prev">
+      <a href="../index.html#research">&larr; All research</a>
+      <a href="avae.html">AVAE: Matching Aggregate Posteriors &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; <span id="year">2026</span> Surojit Saha</span>
+    <span><a href="../index.html">Home</a> · <a href="https://github.com/Surojit-Utah">GitHub</a> · <a href="https://scholar.google.com/citations?user=llj6F3wAAAAJ&amp;hl=en">Scholar</a></span>
+  </div>
+</footer>
+</body>
+</html>
