@@ -217,124 +217,196 @@
 <!-- ================= RESEARCH ================= -->
 <section class="block" id="research">
   <div class="wrap">
-    <div class="section-head">
-      <h2>Research</h2>
-      <span class="aside">Open-source code for each featured project</span>
-    </div>
-    <p class="lede">My research develops probabilistic methods that make deep models more reliable with limited data: latent spaces that match their intended distributions, priors that discover how many dimensions a dataset needs, and segmentation models that adapt to new domains from a handful of labeled examples.</p>
+    <div class="section-head"><h2>Research</h2></div>
+    <p class="lede">My research develops probabilistic methods that make deep models more reliable with limited data: latent spaces that match their intended distributions, priors that discover how many dimensions a dataset needs, and segmentation models that adapt to new domains from a handful of labeled examples. I also collaborated with researchers from ExxonMobil on interpreting seismic images.</p>
+    <nav class="proj-toc" aria-label="Projects">
+      <a href="#p-ardvae">ARD-VAE</a>
+      <a href="#p-adasemseg">AdaSemSeg</a>
+      <a href="#p-disent">Disentanglement analysis</a>
+      <a href="#p-avae">AVAE</a>
+      <a href="#p-multitask">Multitask learning</a>
+      <a href="#p-gen">GENs</a>
+      <a href="#p-gpunet">GP-UNet</a>
+    </nav>
 
-    <div class="cards" style="margin-top:24px">
-      <article class="card">
-        <a class="thumb" href="projects/ard-vae.html" aria-label="ARD-VAE project page"><img src="assets/img/projects/ardvae_thumb.jpg" alt="Latent traversals on 3D Shapes: relevant axes change one factor each, irrelevant axes change nothing" loading="lazy"></a>
-        <div class="body">
-          <div class="meta"><span class="badge gold">WACV 2025 · Oral</span></div>
-          <h3><a href="projects/ard-vae.html">ARD-VAE: Finding the Relevant Latent Dimensions of VAEs</a></h3>
-          <p>A hierarchical, data-driven prior lets a VAE discover how many latent dimensions a dataset needs, with no change to the ELBO and no extra hyperparameters.</p>
-          <div class="actions">
-            <a class="btn sm" href="projects/ard-vae.html">Project</a>
-            <a class="btn sm" href="https://arxiv.org/abs/2501.10901">arXiv</a>
-            <a class="btn sm" href="https://github.com/Surojit-Utah/ARD-VAE">Code</a>
-          </div>
-        </div>
-      </article>
+    <article class="proj" id="p-ardvae">
+      <h3>ARD-VAE: A Statistical Formulation to Find the Relevant Latent Dimensions of Variational Autoencoders</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Sarang Joshi, Ross Whitaker</p>
+      <p class="p-venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2025 <span class="badge gold">Oral</span></p>
+      <div class="p-links">
+        <a class="btn sm" href="https://arxiv.org/pdf/2501.10901">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1109/WACV61041.2025.00096">Paper</a>
+        <a class="btn sm" href="https://github.com/Surojit-Utah/ARD-VAE">Code</a>
+        <a class="btn sm" href="projects/ard-vae.html">Project page</a>
+      </div>
+      <figure>
+        <img src="assets/img/projects/ardvae_traversal.jpg" alt="Latent traversals on 3D Shapes" loading="lazy">
+        <figcaption>Latent traversals on 3D Shapes. Each relevant axis found by ARD-VAE controls one generative factor; traversing the irrelevant axes (red box) leaves the output unchanged.</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>Discovers the relevant latent axes of a VAE using a hierarchical (automatic relevance determination) prior, without modifying the ELBO.</li>
+        <li>Insensitive to the choice of autoencoder architecture and optimization strategy: no trainable masks, no L<sub>0</sub> penalty, and no extra hyperparameters.</li>
+        <li>Starts from a generous latent size and prunes it down; on synthetic data with six known factors it recovers about six active dimensions.</li>
+        <li>Gives the best or near-best FID, precision–recall, and disentanglement (MIG) on real and synthetic datasets.</li>
+      </ul>
+      <figure class="narrow">
+        <img src="assets/img/projects/ardvae_estvar.jpg" alt="Estimated per-axis variance on CIFAR-10" loading="lazy">
+        <figcaption>Maximum and minimum estimated per-axis variance during training on CIFAR-10 (L = 128 and 256): relevant axes keep large variance while the least relevant collapse toward zero.</figcaption>
+      </figure>
+    </article>
 
-      <article class="card">
-        <a class="thumb contain" href="projects/avae.html" aria-label="AVAE project page"><img src="assets/img/projects/avae_dist.jpg" alt="2D aggregate posteriors: VAE and beta-TCVAE leave holes, AVAE matches the Gaussian ground truth" loading="lazy"></a>
-        <div class="body">
-          <div class="meta"><span class="badge gold">ICPR 2024 · Oral</span></div>
-          <h3><a href="projects/avae.html">AVAE: Matching Aggregate Posteriors in the VAE</a></h3>
-          <p>Kernel density estimation of the aggregate posterior removes latent-space holes and posterior collapse, with a bias-corrected bandwidth that scales beyond 100 dimensions.</p>
-          <div class="actions">
-            <a class="btn sm" href="projects/avae.html">Project</a>
-            <a class="btn sm" href="https://arxiv.org/abs/2311.07693">arXiv</a>
-            <a class="btn sm" href="https://github.com/Surojit-Utah/AVAE">Code</a>
-          </div>
-        </div>
-      </article>
+    <article class="proj" id="p-adasemseg">
+      <h3>AdaSemSeg: An Adaptive Few-shot Semantic Segmentation of Seismic Facies</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Ross Whitaker</p>
+      <p class="p-venue">IEEE Transactions on Geoscience and Remote Sensing (TGRS), 2025</p>
+      <div class="p-links">
+        <a class="btn sm" href="https://arxiv.org/pdf/2501.16760">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1109/TGRS.2025.3595010">Paper</a>
+        <a class="btn sm" href="https://github.com/Surojit-Utah/AdaSemSeg">Code</a>
+        <a class="btn sm" href="https://doi.org/10.5281/zenodo.21762769">Weights</a>
+        <a class="btn sm" href="https://doi.org/10.5281/zenodo.21764042">Data</a>
+        <a class="btn sm" href="projects/adasemseg.html">Project page</a>
+      </div>
+      <figure>
+        <img src="assets/img/projects/adasemseg_arch.jpg" alt="AdaSemSeg architecture" loading="lazy">
+        <figcaption>AdaSemSeg decomposes multi-class segmentation into class-agnostic binary tasks. Shared encoders feed a Gaussian-process regressor per facies, and a shared decoder predicts each mask.</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>An adaptive few-shot segmentation method for seismic facies that handles a different number of facies in each dataset, with no change to the architecture.</li>
+        <li>Generalizes to unseen seismic surveys from a handful of annotated slices, without fine-tuning on the target survey.</li>
+        <li>Initializing the image encoder with contrastive learning (SimCLR) on unlabeled seismic data substantially improves performance.</li>
+        <li>Comprehensively outperforms a prototype-based few-shot method and a segmentation model trained with transfer learning.</li>
+      </ul>
+      <figure class="narrow">
+        <img src="assets/img/projects/adasemseg_task.jpg" alt="Few-shot facies segmentation task" loading="lazy">
+        <figcaption>The task: given five annotated slices from an unseen seismic volume, predict the facies of a query slice.</figcaption>
+      </figure>
+    </article>
 
-      <article class="card">
-        <a class="thumb" href="projects/adasemseg.html" aria-label="AdaSemSeg project page"><img src="assets/img/projects/adasemseg_thumb.jpg" alt="Seismic slices with facies annotations in six colors" loading="lazy"></a>
-        <div class="body">
-          <div class="meta"><span class="badge">IEEE TGRS 2025</span></div>
-          <h3><a href="projects/adasemseg.html">AdaSemSeg: Adaptive Few-Shot Segmentation of Seismic Facies</a></h3>
-          <p>A class-agnostic, Gaussian-process few-shot segmenter that adapts to unseen seismic surveys with different numbers of facies, without any fine-tuning.</p>
-          <div class="actions">
-            <a class="btn sm" href="projects/adasemseg.html">Project</a>
-            <a class="btn sm" href="https://doi.org/10.1109/TGRS.2025.3595010">Paper</a>
-            <a class="btn sm" href="https://github.com/Surojit-Utah/AdaSemSeg">Code</a>
-          </div>
-        </div>
-      </article>
+    <article class="proj" id="p-disent">
+      <h3>Disentanglement Analysis in Deep Latent Variable Models Matching Aggregate Posterior Distributions</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Sarang Joshi, Ross Whitaker</p>
+      <p class="p-venue">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2025</p>
+      <div class="p-links">
+        <a class="btn sm" href="https://arxiv.org/pdf/2501.15705">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1109/ICASSP49660.2025.10889788">Paper</a>
+        <a class="btn sm" href="https://github.com/Surojit-Utah/PCA_Disentanglement">Code</a>
+        <a class="btn sm" href="projects/disentanglement.html">Project page</a>
+      </div>
+      <figure>
+        <img src="assets/img/projects/icassp_traversal.jpg" alt="Latent traversals on 3D Shapes for the AVAE and beta-TCVAE" loading="lazy">
+        <figcaption>Latent traversals on 3D Shapes for the AVAE (left) and β-TCVAE (right).</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>Models that match the aggregate posterior to an isotropic Gaussian (AVAE, AAE, WAE, GENs) are rotation-invariant, so their generative factors need not align with the coordinate axes that standard disentanglement metrics assume.</li>
+        <li>A statistical method that discovers the latent directions explaining each generative factor using PCA, and aggregates the estimates into a stable set of directions.</li>
+        <li>PCA-based versions of the FactorVAE and MIG metrics that evaluate any deep latent variable model fairly.</li>
+        <li>With the new metrics, the AVAE gets the highest disentanglement scores on DSprites and 3D Shapes.</li>
+      </ul>
+      <figure>
+        <img src="assets/img/projects/icassp_angles.jpg" alt="Pairwise angles between discovered latent directions" loading="lazy">
+        <figcaption>Pairwise angles between the six latent directions estimated for different models on 3D Shapes. Deviation from orthogonality indicates entanglement.</figcaption>
+      </figure>
+    </article>
 
-      <article class="card">
-        <a class="thumb svg" href="projects/disentanglement.html" aria-label="Disentanglement analysis project page">
-          <svg viewBox="0 0 400 175" width="100%" height="100%" role="img" aria-label="Point cloud with cardinal axes and rotated principal directions">
-            <g transform="translate(200 88)">
-              <line x1="-150" y1="0" x2="150" y2="0" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="4 4"/>
-              <line x1="0" y1="-80" x2="0" y2="80" stroke="currentColor" stroke-opacity=".25" stroke-dasharray="4 4"/>
-              <g transform="rotate(-32)" fill="var(--accent)" fill-opacity=".35">
-                <ellipse cx="0" cy="0" rx="118" ry="34" fill-opacity=".10"/>
-                <circle cx="-90" cy="6" r="3"/><circle cx="-72" cy="-14" r="3"/><circle cx="-55" cy="10" r="3"/><circle cx="-40" cy="-6" r="3"/>
-                <circle cx="-22" cy="18" r="3"/><circle cx="-8" cy="-16" r="3"/><circle cx="6" cy="4" r="3"/><circle cx="20" cy="-20" r="3"/>
-                <circle cx="34" cy="14" r="3"/><circle cx="50" cy="-4" r="3"/><circle cx="66" cy="16" r="3"/><circle cx="82" cy="-10" r="3"/>
-                <circle cx="96" cy="6" r="3"/><circle cx="-100" cy="-8" r="3"/><circle cx="-30" cy="24" r="3"/><circle cx="40" cy="-24" r="3"/>
-                <line x1="-135" y1="0" x2="135" y2="0" stroke="var(--accent)" stroke-width="2.5" stroke-opacity="1"/>
-                <line x1="0" y1="-50" x2="0" y2="50" stroke="var(--accent)" stroke-width="2.5" stroke-opacity="1"/>
-              </g>
-            </g>
-          </svg>
-        </a>
-        <div class="body">
-          <div class="meta"><span class="badge">ICASSP 2025</span></div>
-          <h3><a href="projects/disentanglement.html">Disentanglement Analysis for Rotation-Invariant Latent Models</a></h3>
-          <p>PCA-discovered latent directions make disentanglement metrics fair for models that match aggregate posteriors, where generative factors need not align with the coordinate axes.</p>
-          <div class="actions">
-            <a class="btn sm" href="projects/disentanglement.html">Project</a>
-            <a class="btn sm" href="https://arxiv.org/abs/2501.15705">arXiv</a>
-            <a class="btn sm" href="https://github.com/Surojit-Utah/PCA_Disentanglement">Code</a>
-          </div>
-        </div>
-      </article>
-    </div>
+    <article class="proj" id="p-avae">
+      <h3>Matching Aggregate Posteriors in the Variational Autoencoder</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Sarang Joshi, Ross Whitaker</p>
+      <p class="p-venue">International Conference on Pattern Recognition (ICPR), 2024 <span class="badge gold">Oral</span></p>
+      <div class="p-links">
+        <a class="btn sm" href="https://arxiv.org/pdf/2311.07693">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1007/978-3-031-78172-8_28">Paper</a>
+        <a class="btn sm" href="https://github.com/Surojit-Utah/AVAE">Code</a>
+        <a class="btn sm" href="projects/avae.html">Project page</a>
+      </div>
+      <figure>
+        <img src="assets/img/projects/avae_dist.jpg" alt="Aggregate posteriors in a 2D latent space for VAE, beta-TCVAE, AVAE and ground truth" loading="lazy">
+        <figcaption>Aggregate posterior in a 2D latent space. The VAE and β-TCVAE leave holes and clusters; the AVAE matches the ground-truth Gaussian.</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>The AVAE matches the aggregate posterior to the prior using a kernel density estimate (KDE), filling the holes in the VAE's latent space and alleviating posterior collapse.</li>
+        <li>An automated, bias-corrected method for estimating the KDE bandwidth, which makes KDE usable in high-dimensional latent spaces (more than 100 dimensions).</li>
+        <li>The regularization weight β is updated during training by a proposed heuristic, so it doesn't need to be tuned.</li>
+        <li>Best FID on MNIST, CelebA and CIFAR-10 among the compared VAE and autoencoder models.</li>
+      </ul>
+      <figure>
+        <img src="assets/img/projects/avae_collapse.jpg" alt="Pairwise latent scatter plots on MNIST showing posterior collapse" loading="lazy">
+        <figcaption>Pairwise latent scatter plots on MNIST. Collapsed axes (red boxes) appear for the VAE and β-TCVAE; every AVAE axis stays informative.</figcaption>
+      </figure>
+    </article>
 
-    <div class="mini-grid">
-      <div class="mini">
-        <span class="meta">Machine Learning (journal), 2022</span>
-        <h4>GENs: Generative Encoding Networks</h4>
-        <p>KDE-based matching of the latent distribution as an alternative to adversarial training, with applications to outlier detection.</p>
-        <div class="actions"><a class="btn sm" href="https://doi.org/10.1007/s10994-022-06220-w">Paper</a><a class="btn sm" href="files/GEN.pdf">PDF</a></div>
+    <article class="proj" id="p-multitask">
+      <h3>Multi-task Training as Regularization Strategy for Seismic Image Segmentation</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>*, Wasim Gazi*, Rehman Mohammed, Thomas Rapstine, Hayden Powers, Ross Whitaker <span class="eq">(*equal contribution)</span></p>
+      <p class="p-venue">IEEE Geoscience and Remote Sensing Letters (GRSL), 2023</p>
+      <div class="p-links">
+        <a class="btn sm" href="files/Multitask.pdf">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1109/LGRS.2023.3328837">Paper</a>
       </div>
-      <div class="mini">
-        <span class="meta">MICCAI MOVI Workshop, 2022 · Best Paper</span>
-        <h4>GP-UNet: Few-Shot Segmentation of Microscopy Images</h4>
-        <p>Gaussian-process regression in a U-Net's latent space for segmenting microscopy images from a few labeled examples.</p>
-        <div class="actions"><a class="btn sm" href="https://doi.org/10.1007/978-3-031-16961-8_10">Paper</a><a class="btn sm" href="files/GPUNet.pdf">PDF</a></div>
+      <figure class="narrow">
+        <img src="assets/img/projects/mt_tasks.jpg" alt="Seismic image and its self-supervised auxiliary tasks: horizons, dip angle, amplitude" loading="lazy">
+        <figcaption>A seismic image and the self-supervised auxiliary tasks derived from it: horizons, dip angle and amplitude.</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>Defines domain-specific, self-supervised auxiliary tasks for regularizing deep networks that segment channels in seismic images.</li>
+        <li>Analyzes and demonstrates the effectiveness of the proposed multitask learning for channel segmentation.</li>
+        <li>Shows that multitask learning is especially effective when annotated data for interpreting complex seismic images is limited.</li>
+      </ul>
+      <figure class="narrow">
+        <img src="assets/img/projects/mt_result.jpg" alt="Channel segmentation results for different training scenarios" loading="lazy">
+        <figcaption>Channel segmentation results (red) for different training scenarios on the P-shallow test data.</figcaption>
+      </figure>
+    </article>
+
+    <article class="proj" id="p-gen">
+      <h3>GENs: Generative Encoding Networks</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Shireen Elhabian, Ross Whitaker</p>
+      <p class="p-venue">Machine Learning, 111(11):4003–4038, 2022</p>
+      <div class="p-links">
+        <a class="btn sm" href="files/GEN.pdf">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1007/s10994-022-06220-w">Paper</a>
       </div>
-      <div class="mini">
-        <span class="meta">IEEE GRSL, 2023</span>
-        <h4>Multitask Training as Regularization for Seismic Segmentation</h4>
-        <p>Domain-specific self-supervised auxiliary tasks that regularize segmentation networks when labeled data is scarce.</p>
-        <div class="actions"><a class="btn sm" href="https://doi.org/10.1109/LGRS.2023.3328837">Paper</a><a class="btn sm" href="files/Multitask.pdf">PDF</a></div>
+      <figure>
+        <img src="assets/img/projects/gen_fig1.jpg" alt="Latent distributions at increasing separation and the JSD estimated by a neural discriminator versus KDE" loading="lazy">
+        <figcaption>As two latent clusters separate (top), the KDE-based estimate of the Jensen–Shannon divergence grows accordingly, unlike the estimate from a neural-network discriminator (bottom).</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>Uses kernel density estimation to approximate the latent data distribution and compute the Jensen–Shannon divergence loss, as a non-adversarial alternative to GAN-style training.</li>
+        <li>A robust, automated method for estimating the KDE bandwidth that uses the known structure of the target distribution.</li>
+        <li>An analytical proof that, on convergence, the optimization matches the target distribution up to a known scaling factor.</li>
+        <li>KDE-based divergence estimation is as effective as or better than adversarial training, especially with limited training data.</li>
+        <li>Demonstrates the learned latent space for outlier detection, compared against state-of-the-art methods.</li>
+      </ul>
+      <figure>
+        <img src="assets/img/projects/gen_mog.jpg" alt="MNIST held-out data mapped to a mixture of 10 Gaussians" loading="lazy">
+        <figcaption>Held-out MNIST data mapped to a mixture of ten 2D Gaussians in the latent space: (a) without supervision and (b) with labels for 10K training samples.</figcaption>
+      </figure>
+    </article>
+
+    <article class="proj" id="p-gpunet">
+      <h3>GP-UNet: Few-Shot Segmentation of Microscopy Images Using Gaussian Process</h3>
+      <p class="p-authors"><span class="me">Surojit Saha</span>, Ouk Choi, Ross Whitaker</p>
+      <p class="p-venue">MICCAI Workshop on Medical Optical Imaging and Virtual Microscopy Image Analysis (MOVI), 2022 <span class="badge gold">Best Paper</span></p>
+      <div class="p-links">
+        <a class="btn sm" href="files/GPUNet.pdf">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1007/978-3-031-16961-8_10">Paper</a>
       </div>
-      <div class="mini">
-        <span class="meta">WACV Workshops, 2025</span>
-        <h4>Audio-Visual Idling Vehicle Detection</h4>
-        <p>Joint audio-visual deep learning for detecting idling vehicles in real-world traffic monitoring.</p>
-        <div class="actions"><a class="btn sm" href="https://doi.org/10.1109/WACVW65960.2025.00098">Paper</a></div>
-      </div>
-      <div class="mini">
-        <span class="meta">CVPR, 2019</span>
-        <h4>Minimal Solvers for Mini-Loop Closures in 3D Multi-Scan Alignment</h4>
-        <p>Joint camera-pose estimation over small loops of 3D scans as an alternative to pairwise registration.</p>
-        <div class="actions"><a class="btn sm" href="https://doi.org/10.1109/CVPR.2019.00993">Paper</a></div>
-      </div>
-      <div class="mini">
-        <span class="meta">Robotics and Autonomous Systems, 2015</span>
-        <h4>Monte Carlo Localization on Line-Segment Maps</h4>
-        <p>A new method for computing importance weights in particle-filter localization on segment-based maps.</p>
-        <div class="actions"><a class="btn sm" href="https://doi.org/10.1016/j.robot.2015.07.001">Paper</a></div>
-      </div>
-    </div>
+      <figure>
+        <img src="assets/img/projects/gpunet_arch.jpg" alt="GP-UNet architecture" loading="lazy">
+        <figcaption>GP-UNet architecture: Gaussian-process regression in the latent space of a U-Net, using a few annotated support examples.</figcaption>
+      </figure>
+      <ul class="p-contrib">
+        <li>A few-shot segmentation method for microscopy images that performs Gaussian-process regression in the encoded feature space of a U-Net.</li>
+        <li>Segments new target classes from only a few labeled examples.</li>
+        <li>Outperforms DGPNet+ in all scenarios and the GBMLCS few-shot baseline, and is compared against a fine-tuned U-Net (TL-UNet).</li>
+      </ul>
+      <figure>
+        <img src="assets/img/projects/gpunet_result.jpg" alt="GP-UNet 5-shot segmentation outputs on five microscopy datasets" loading="lazy">
+        <figcaption>5-shot GP-UNet segmentation on five microscopy datasets: input (top), ground truth (middle) and prediction (bottom).</figcaption>
+      </figure>
+    </article>
+
+    <p class="proj-more">Earlier work on 3D multi-scan alignment (CVPR 2019), Monte Carlo localization for mobile robots, and audio-visual vehicle detection is listed under <a href="#publications">Publications</a>.</p>
   </div>
 </section>
 
