@@ -341,19 +341,22 @@
         <a class="btn sm" href="files/Multitask.pdf">PDF</a>
         <a class="btn sm" href="https://doi.org/10.1109/LGRS.2023.3328837">Paper</a>
       </div>
-      <figure class="narrow">
-        <img src="assets/img/projects/mt_tasks.jpg" alt="Seismic image and its self-supervised auxiliary tasks: horizons, dip angle, amplitude" loading="lazy">
-        <figcaption>A seismic image and the self-supervised auxiliary tasks derived from it: horizons, dip angle and amplitude.</figcaption>
-      </figure>
+      <div class="fig-row">
+        <figure>
+          <img src="assets/img/projects/mt_tasks.jpg" alt="One seismic image and the horizons, dip angle and amplitude maps derived from it" loading="lazy">
+          <figcaption><strong>Training:</strong> a single seismic input (top) and the auxiliary targets extracted from that same image (horizons, dip angle and amplitude). No extra labeling is needed; these self-supervised targets are learned jointly with channel segmentation.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/projects/mt_result.jpg" alt="Channel segmentation results for segmentation-only and multitask models" loading="lazy">
+          <figcaption><strong>Evaluation:</strong> channel predictions (red) on held-out P-shallow test data from models trained on P-shallow, comparing segmentation alone with segmentation plus each auxiliary task and all tasks combined, against the ground truth (top).</figcaption>
+        </figure>
+      </div>
       <ul class="p-contrib">
+        <li><strong>Industry collaboration:</strong> carried out with researchers from ExxonMobil (co-authors Thomas Rapstine and Hayden Powers, ExxonMobil Upstream) and supported by ExxonMobil Upstream.</li>
         <li>Defines domain-specific, self-supervised auxiliary tasks for regularizing deep networks that segment channels in seismic images.</li>
         <li>Analyzes and demonstrates the effectiveness of the proposed multitask learning for channel segmentation.</li>
         <li>Shows that multitask learning is especially effective when annotated data for interpreting complex seismic images is limited.</li>
       </ul>
-      <figure class="narrow">
-        <img src="assets/img/projects/mt_result.jpg" alt="Channel segmentation results for different training scenarios" loading="lazy">
-        <figcaption>Channel segmentation results (red) for different training scenarios on the P-shallow test data.</figcaption>
-      </figure>
     </article>
 
     <article class="proj" id="p-gen">
