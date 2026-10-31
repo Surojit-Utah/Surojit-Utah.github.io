@@ -391,12 +391,13 @@
       </div>
       <figure>
         <img src="assets/img/projects/gpunet_arch.jpg" alt="GP-UNet architecture" loading="lazy">
-        <figcaption>GP-UNet architecture: Gaussian-process regression in the latent space of a U-Net, using a few annotated support examples.</figcaption>
+        <figcaption>GP-UNet architecture. A dedicated <strong>mask encoder (ME)</strong> encodes the support masks, and a Gaussian process regresses from the image encoder's (IE) latent features to these learned mask features. The decoder (D) then predicts the query mask from the GP posterior and the U-Net skip connections.</figcaption>
       </figure>
       <ul class="p-contrib">
-        <li>A few-shot segmentation method for microscopy images that performs Gaussian-process regression in the encoded feature space of a U-Net.</li>
-        <li>Segments new target classes from only a few labeled examples.</li>
-        <li>Outperforms DGPNet+ in all scenarios and the GBMLCS few-shot baseline, and is compared against a fine-tuned U-Net (TL-UNet).</li>
+        <li><strong>Mask encoder + latent-space GP regression (key idea).</strong> Instead of regressing raw pixel labels, a dedicated mask encoder maps the support masks into a learned latent space. A Gaussian process then regresses from the image encoder's latent features to these mask features, learning a distribution of functions from encoded images to encoded masks from just the support set.</li>
+        <li>The GP posterior (mean and covariance) for the query image serves as a prior for the decoder. This non-parametric adaptation to the support set keeps the model robust when only a handful of labeled examples are available, the regime where conventional networks tend to overfit.</li>
+        <li>Shows that the fine-tuning stage of few-shot learning is beneficial for microscopy images.</li>
+        <li>Outperforms DGPNet+ in all scenarios and the GBMLCS few-shot method overall, across five microscopy datasets.</li>
       </ul>
       <figure>
         <img src="assets/img/projects/gpunet_result.jpg" alt="GP-UNet 5-shot segmentation outputs on five microscopy datasets" loading="lazy">
