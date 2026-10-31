@@ -233,6 +233,7 @@
       <a href="#p-ardvae">ARD-VAE</a>
       <a href="#p-adasemseg">AdaSemSeg</a>
       <a href="#p-disent">Disentanglement analysis</a>
+      <a href="#p-avivd">Audio-visual vehicle detection</a>
       <a href="#p-avae">AVAE</a>
       <a href="#p-multitask">Multitask learning</a>
       <a href="#p-gen">GENs</a>
@@ -315,6 +316,34 @@
         <img src="assets/img/projects/icassp_angles.jpg" alt="Pairwise angles between discovered latent directions" loading="lazy">
         <figcaption>Pairwise angles between the six latent directions estimated for different models on 3D Shapes. Deviation from orthogonality indicates entanglement.</figcaption>
       </figure>
+    </article>
+
+    <article class="proj" id="p-avivd">
+      <h3>Joint Audio-Visual Idling Vehicle Detection with Streamlined Input Dependencies</h3>
+      <p class="p-authors">Xiwen Li, Rehman Mohammed, Tristalee Mangin, <span class="me">Surojit Saha</span>, Kerry Kelly, Ross Whitaker, Tolga Tasdizen</p>
+      <p class="p-venue">IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW), 2025</p>
+      <div class="p-links">
+        <a class="btn sm" href="https://arxiv.org/pdf/2410.21170">PDF</a>
+        <a class="btn sm" href="https://doi.org/10.1109/WACVW65960.2025.00098">Paper</a>
+        <a class="btn sm" href="https://arxiv.org/abs/2410.21170">arXiv</a>
+      </div>
+      <div class="fig-row">
+        <figure>
+          <img src="assets/img/projects/avivd_setup.jpg" alt="Roadside microphones and a webcam monitoring vehicles, with a reminder display" loading="lazy">
+          <figcaption><strong>The setting:</strong> roadside microphones and a webcam monitor vehicles, and a display reminds drivers of idling vehicles to switch off their engines.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/projects/avivd_results.jpg" alt="Detections of moving, idling and engine-off vehicles with the corresponding audio spectrograms" loading="lazy">
+          <figcaption><strong>The result:</strong> detections compared with ground truth, alongside the audio spectrograms. Green, red and blue boxes mark moving, idling and engine-off vehicles.</figcaption>
+        </figure>
+      </div>
+      <ul class="p-contrib">
+        <li><strong>Multimodal fusion where each modality alone is not enough.</strong> A parked car looks the same whether its engine is idling or off, and engine sound alone doesn't say which car it comes from. Video and audio carry complementary information, unlike typical audio-visual tasks where both modalities show the same event.</li>
+        <li>AVIVDNet, an end-to-end network that fuses audio and visual features with a bidirectional attention mechanism and learns a joint feature space. It detects vehicles as moving, idling or engine-off without the manual input clicks required by the earlier approach.</li>
+        <li>The AVIVD dataset, seven times larger than previous idling-detection datasets.</li>
+        <li>Performance comparable to state-of-the-art methods on AVIVD and on the public MAVD dataset, showing potential for camera setups in self-driving vehicles.</li>
+        <li>Applications in reducing air pollution, greenhouse-gas emissions and fuel waste from unnecessary idling. This builds on our earlier <a href="https://doi.org/10.3233/ATDE240029">real-time audio-visual idling detection system</a>.</li>
+      </ul>
     </article>
 
     <article class="proj" id="p-avae">
@@ -418,7 +447,7 @@
       </figure>
     </article>
 
-    <p class="proj-more">Earlier work on 3D multi-scan alignment (CVPR 2019), Monte Carlo localization for mobile robots, and audio-visual vehicle detection is listed under <a href="#publications">Publications</a>.</p>
+    <p class="proj-more">Earlier work on 3D multi-scan alignment (CVPR 2019) and Monte Carlo localization for mobile robots is listed under <a href="#publications">Publications</a>.</p>
   </div>
 </section>
 
